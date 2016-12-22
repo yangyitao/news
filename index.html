@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="san-stu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>San-Stu</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <script src="js/ionic.bundle.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/controller/controller.js"></script>
+    <script>
+        window.location.href = '#/index/newsList';
+    </script>
+    <style>
+        /*loading动画*/
+        @-webkit-keyframes loading {
+            from{
+                -webkit-transform: rotate(0deg);
+            }
+            to{
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        .ion-load-a{
+            -webkit-animation: loading 1s ease-in infinite;
+        }
+    </style>
+</head>
+<body >
+    <div ui-view=""></div>
+</body>
+</html>

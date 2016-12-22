@@ -1,0 +1,21 @@
+<ion-header-bar class="bar-header bar-assertive">
+    <a class="button icon-left ion-chevron-left button-clear" href="#/index/newsList">返回</a>
+    <h1 class="title">San-Stu头条</h1>
+</ion-header-bar>
+<ion-content>
+    <div ng-show="isShow" class="list card" style="padding-top: 30px;margin-left: 0;margin-right: 0;">
+        <div class="item item-avatar">
+            <h2>{{news.title}}</h2>
+            <p>{{news.pubDate}}</p>
+            <p>{{news.source}}</p>
+            <a ng-href="{{link}}">原文链接</a>
+        </div>
+        <div class="item item-body">
+            <img class="full-image" ng-src="{{news.imageurls[0].url}}" ng-hide="news.havaPic">
+            <p ng-repeat="detail in details">
+                {{detail}}
+            </p>
+        </div>
+    </div>
+    <div ng-hide="isShow" class="ion-load-a active" data-pack="default" data-tags="spinner, waiting, refresh" style="margin: 0 auto;width: 25px;font-size: 35px;"></div>
+</ion-content>
